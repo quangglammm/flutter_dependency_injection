@@ -1,11 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_dependency_injection/ui/routing/route.gr.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../injection.dart';
 import '../bloc/login/login_form_bloc.dart';
+import '../routing/route.gr.dart';
 
+@RoutePage()
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 

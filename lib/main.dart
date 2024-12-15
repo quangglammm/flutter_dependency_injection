@@ -9,14 +9,13 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  // final _appRouter = locator<AppRouter>();
+  final _appRouter = locator<AppRouter>();
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      // routerDelegate: _appRouter.delegate(),
-      // routeInformationParser: _appRouter.defaultRouteParser(),
+      routerConfig: _appRouter.config(),
       color: Colors.redAccent,
     );
   }

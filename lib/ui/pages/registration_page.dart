@@ -4,6 +4,7 @@ import 'package:auto_route/auto_route.dart';
 
 import '../routing/route.gr.dart';
 
+@RoutePage()
 class RegistrationPage extends StatelessWidget {
   const RegistrationPage({Key? key}) : super(key: key);
 

@@ -7,4 +7,5 @@ final locator = GetIt.instance;
 @InjectableInit()
 /// Old syntax
 // void configureDependencies() => $initGetIt(getIt);
+/// New syntax
 Future<void> configureDependencies() async => locator.init();
