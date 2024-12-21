@@ -1,12 +1,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
+import 'package:flutter_dependency_injection/ui/routing/enum/page_name_enum.dart';
+import 'package:get/get.dart';
 
-import '../routing/route.gr.dart';
+import '../routing/main_routing.dart';
 
-@RoutePage()
 class RegistrationPage extends StatelessWidget {
-  const RegistrationPage({Key? key}) : super(key: key);
+  const RegistrationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,9 +76,8 @@ class RegistrationPage extends StatelessWidget {
                                 minimumSize: Size(double.infinity, 55),
                               ),
                               onPressed: () {
-                                context.router.push(
-                                    LoginRoute()
-                                );
+                                /// Using GetX to navigate
+                                Get.toNamed(getPageName(PageNameEnum.LOGIN));
                               },
                               child: Text("Sign Up", style: TextStyle(
                                 color: Colors.white,
@@ -107,9 +106,8 @@ class RegistrationPage extends StatelessWidget {
                                   recognizer: TapGestureRecognizer()
                                     ..onTap = () {
                                       print("Let's go");
-                                      context.router.push(
-                                          LoginRoute()
-                                      );
+                                      /// Using GetX to navigate
+                                      Get.toNamed(getPageName(PageNameEnum.LOGIN));
                                     }
                               ),
                             ]

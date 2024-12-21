@@ -6,12 +6,14 @@ class LoginFormState extends Equatable {
   final String? password;
   final bool? isSubmitting;
   final List<String>? errors;
-  LoginFormState(
-      {this.username,
-        this.email,
-        this.password,
-        this.isSubmitting,
-        this.errors});
+
+  LoginFormState({
+    this.username,
+    this.email,
+    this.password,
+    this.isSubmitting,
+    this.errors
+  });
 
   @override
   List<Object?> get props => [username, email, password, isSubmitting, errors];

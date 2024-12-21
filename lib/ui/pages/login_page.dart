@@ -1,13 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dependency_injection/ui/routing/enum/page_name_enum.dart';
+import 'package:flutter_dependency_injection/ui/routing/main_routing.dart';
+import 'package:get/get.dart';
 
 import '../../injection.dart';
 import '../bloc/login/login_form_bloc.dart';
-import '../routing/route.gr.dart';
 
-@RoutePage()
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -94,7 +94,8 @@ class LoginPage extends StatelessWidget {
                                           ),
                                           recognizer: TapGestureRecognizer()
                                             ..onTap = () {
-                                              context.router.push(RegistrationRoute());
+                                            /// Using GetX to navigate
+                                              Get.toNamed(getPageName(PageNameEnum.REGISTRATION));
                                             }
                                       ),
                                     ]

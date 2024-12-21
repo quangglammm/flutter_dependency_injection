@@ -15,7 +15,4 @@ abstract class AppModule {
 
   @injectable
   FirebaseAuth get auth => FirebaseAuth.instance;
-
-  @injectable
-  AppRouter get appRouter => AppRouter();
 }

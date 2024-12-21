@@ -17,17 +17,16 @@ dependencies:
   equatable:
   injectable:
   json_annotation:
-  auto_route:
   firebase_core:
   firebase_auth:
   cloud_firestore:
   cupertino_icons: ^1.0.8
   flutter_bloc:
+  get:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  auto_route_generator:
   build_runner:
   json_serializable:
   injectable_generator:
